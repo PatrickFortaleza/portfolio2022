@@ -17,3 +17,33 @@
     margin-right: 40px;
   }
 }
+
+@mixin logo-type {
+  font-family: retiro-std-24pt,  sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin heading-bold {
+  font-family: usual, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin heading-regular {
+  font-family: usual, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin body-bold {
+  font-family: usual, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin body-regular {
+  font-family: usual, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -50,10 +50,10 @@ export function ScreenProvider({ children }) {
     windowYOffset === 0 ? setIsTop(true) : setIsTop(false);
   }, [windowYOffset]);
 
-  // const scrollToSection = (e) => {
-  //   const sectionToNavigate = +e.target.closest("button").id;
-  //   setCurrentSection(sectionToNavigate);
-  // };
+  const scrollToSection = (e) => {
+    const sectionToNavigate = +e.target.closest("button").id;
+    setCurrentSection(sectionToNavigate);
+  };
 
   const handleResize = () => {
     const screenDimensions_ = { ...screenDimensions };
@@ -78,13 +78,13 @@ export function ScreenProvider({ children }) {
   };
 
   const value = {
-    // scrollToSection,
-    // setCurrentSection,
-    // setSectionIndicator,
+    scrollToSection,
+    setCurrentSection,
+    setSectionIndicator,
     screenWidth: screenDimensions.width,
     screenHeight: screenDimensions.height,
-    // currentSection,
-    // sectionIndicator,
+    currentSection,
+    sectionIndicator,
     windowYOffset,
     isTop,
   };
