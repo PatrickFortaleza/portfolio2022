@@ -1,0 +1,65 @@
+@import "../misc/mixins";
+
+.hero {
+  @include h-wrapper-mobile;
+  margin-top: 50px;
+
+  h1 {
+    text-transform: unset;
+    font-size: 24px;
+    line-height: 1.7em;
+    color: var(--text-1);
+  }
+
+  span {
+    color: var(--highlight-primary-1);
+    font-weight: 600;
+  }
+
+  ul {
+    display: flex;
+    margin-top: 20px;
+
+    li {
+      width: 21px;
+      margin-right: 7px;
+
+      svg {
+        fill: var(--text-1);
+      }
+    }
+  }
+}
+
+.logo__accent {
+  margin-top: 20px;
+  background: var(--highlight-primary-1);
+  max-width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  height: 120px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  span {
+    display: block;
+    font-family: retiro-std-24pt,  sans-serif;
+    font-size: 40px;
+    padding: 7px 10px;
+    color: var(--text-3);
+    font-weight: 400;
+  }
+}
+
+.accent {
+  height: 152px;
+  width: 20px;
+  background: var(--highlight-primary-1);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

@@ -1,4 +1,7 @@
 .screen__wrap {
   background: var(--elevation-1);
   height: calc(var(--vh) * 1);
+  padding-top: 52px;
+  overflow: hidden;
+  position: relative;
 }

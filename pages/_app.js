@@ -11,7 +11,7 @@ function App({ Component, pageProps }) {
       <Head>
         <link rel="stylesheet" href="https://use.typekit.net/asp3pmk.css" />
       </Head>
-      <section id="app-container" className={styles.screen__wrap}>
+      <section id="app-container">
         <HeaderCtrl />
         <Component {...pageProps} />
       </section>

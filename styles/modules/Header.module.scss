@@ -17,7 +17,7 @@
   width: 100%;
   transition: 0.2s ease-in-out;
   z-index: 500;
-  border-bottom: 1px solid var(--elevation-1);
+  border-bottom: 1px solid rgba($color: var(--elevation-1), $alpha: 0);
 
   &::before {
     content: "";
