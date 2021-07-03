@@ -1,0 +1,63 @@
+@import "../misc/mixins.scss";
+
+.scroll__path {
+  fill: none;
+  stroke: var(--text-1);
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  animation: draw 3s linear infinite;
+}
+
+.scroll__svg {
+  overflow: visible;
+  height: 75px;
+  width: 75px;
+  enable-background: new 0 0 23.9 27.2;
+}
+
+.prompt__container {
+  position: absolute;
+  bottom: calc(66px + 20px);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    position: relative;
+  }
+}
+
+.prompt__copy {
+  position: absolute;
+  top: calc(50% - 8px);
+  transform: translateY(-50%);
+  right: 14.5px;
+  font-size: 14px;
+  @include body-regular;
+}
+
+.prompt__heading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(100% + 20px);
+  white-space: nowrap;
+  @include body-regular;
+
+  span {
+    color: var(--highlight-primary-1);
+  }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: var(--scrollPath);
+    stroke-dasharray: var(--scrollPath);
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: var(--scrollPath);
+  }
+}

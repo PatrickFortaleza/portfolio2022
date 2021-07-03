@@ -13,6 +13,7 @@ import {
   NodeJsIcon,
   WordPressIcon,
 } from "../../icons";
+import ScrollPromptView from "../../components/ScrollPrompt/view";
 
 export default function HomeSection() {
   return (
@@ -64,6 +65,7 @@ export default function HomeSection() {
         </div>
       </div>
       <span className={styles.accent}></span>
+      <ScrollPromptView />
     </div>
   );
 }
