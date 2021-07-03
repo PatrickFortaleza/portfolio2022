@@ -273,7 +273,7 @@ export const RightCaret = () => (
 );
 
 export const HTMLIcon = () => (
-  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" st>
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path
       id="html"
       d="M5.5,0.7h1v1h0.9v-1h1v3h-1v-1H6.5v1h-1V0.7z M9.8,1.7H8.9v-1h2.8v1h-0.9v2h-1L9.8,1.7L9.8,1.7z M12.2,0.7h1.1

@@ -19,7 +19,7 @@ export default function NavigationBarView({ scrollToSection, styles }) {
             className={sectionIndicator === 0 ? "active" : "inactive"}
             onClick={(e) => scrollToSection(e)}
           >
-            <span class="icon-container">
+            <span className="icon-container">
               <HomeIcon />
             </span>
             <label>Home</label>
@@ -31,7 +31,7 @@ export default function NavigationBarView({ scrollToSection, styles }) {
             className={sectionIndicator === 1 ? "active" : "inactive"}
             onClick={(e) => scrollToSection(e)}
           >
-            <span class="icon-container">
+            <span className="icon-container">
               <AboutIcon />
             </span>
             <label>About</label>
@@ -43,7 +43,7 @@ export default function NavigationBarView({ scrollToSection, styles }) {
             className={sectionIndicator === 2 ? "active" : "inactive"}
             onClick={(e) => scrollToSection(e)}
           >
-            <span class="icon-container">
+            <span className="icon-container">
               <PortfolioIcon />
             </span>
             <label>Portfolio</label>
@@ -55,7 +55,7 @@ export default function NavigationBarView({ scrollToSection, styles }) {
             className={sectionIndicator === 3 ? "active" : "inactive"}
             onClick={(e) => scrollToSection(e)}
           >
-            <span class="icon-container">
+            <span className="icon-container">
               <ContactIcon />
             </span>
             <label>Contact</label>

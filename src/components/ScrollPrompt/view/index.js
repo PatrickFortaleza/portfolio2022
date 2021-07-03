@@ -13,7 +13,7 @@ export default function ScrollPromptView() {
 
   useEffect(() => {
     document.documentElement.style.setProperty("--scrollPath", `${pathLength}`);
-  }, []);
+  }, [pathLength]);
 
   return (
     <div className={styles.prompt__container}>
