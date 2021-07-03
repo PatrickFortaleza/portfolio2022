@@ -17,11 +17,11 @@ export function useScreen() {
 
 export function ScreenProvider({ children }) {
   const initialScreenState = {
-    width: getWindowWidth(),
-    height: getWindowHeight(),
+    width: 0,
+    height: 0,
   };
   const [screenDimensions, setScreenDimensions] = useState(initialScreenState);
-  const [windowYOffset, setWindowYOffset] = useState(window.pageYOffset);
+  const [windowYOffset, setWindowYOffset] = useState(0);
   const [isTop, setIsTop] = useState(true);
   const [currentSection, setCurrentSection] = useState(0);
   const [sectionIndicator, setSectionIndicator] = useState(0);
@@ -29,6 +29,16 @@ export function ScreenProvider({ children }) {
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
+
+    (() => {
+      const initialScreenState = {
+        width: getWindowWidth(),
+        height: getWindowHeight(),
+      };
+
+      setScreenDimensions(initialScreenState);
+      setWindowYOffset(window.pageYOffset);
+    })();
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

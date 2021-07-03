@@ -1,0 +1,19 @@
+@mixin h-wrapper-mobile {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 676px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@mixin h-container-mobile {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @media screen and (min-width: 676px) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
