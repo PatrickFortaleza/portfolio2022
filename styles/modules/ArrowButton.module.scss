@@ -1,0 +1,60 @@
+@import "../misc/mixins.scss";
+
+.arrow__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 20px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  border-radius: 25px;
+
+  @media screen and (min-width: 676px) {
+    padding: 10px 25px;
+  }
+
+  &:hover > span.btn-text,
+  &:active > span.btn-text,
+  &:focus > span.btn-text {
+    margin-right: 40px;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  span {
+    @include heading-bold;
+    font-size: 12px;
+    margin-right: 7px;
+    transition: 0.2s ease-in-out;
+
+    @media screen and (min-width: 676px) {
+      font-size: 17px;
+    }
+  }
+
+  svg {
+    fill: var(--text-1);
+    width: 20px;
+  }
+
+  span.icon-container {
+    width: 21px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      fill: var(--highlight-primary-1);
+    }
+  }
+}
+
+.arrow__button__fill {
+  @extend .arrow__button;
+
+  span.icon-container svg {
+    fill: var(--text-1);
+  }
+}
