@@ -20,8 +20,8 @@ export default function ScrollPromptView() {
 
 
   return (
-      <button onClick={() => setCurrentSection(1)} className={styles.prompt__container} style={hasScrolled ? { opacity: 0, transform: "translateY(20px)", visibility: "hidden" } : {opacity: 1, transform: "translateY(0px)"}}>
-      <div>
+      <div  className={styles.prompt__container} style={hasScrolled ? { opacity: 0, transform: "translateY(20px)", visibility: "hidden" } : {opacity: 1, transform: "translateY(0px)"}}>
+      <button onClick={() => setCurrentSection(1)} style={{position: "relative"}}>
         <span className={styles.prompt__heading}>
           See what I'm <span>all about! </span>
         </span>
@@ -43,7 +43,7 @@ export default function ScrollPromptView() {
 	c0,2.4,0,15.7,0,15.7l-3.7-3.7L4,26.9l3.8-3.8"
           />
         </svg>
-      </div>
-    </button>
+      </button>
+    </div>
   );
 }
