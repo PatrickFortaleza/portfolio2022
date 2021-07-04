@@ -6,6 +6,12 @@
   max-height: 25vh;
   overflow-y: auto;
 
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    flex: 1;
+    max-height: unset;
+  }
+
   span {
     color: var(--highlight-primary-1);
     @include body-bold;
@@ -43,8 +49,44 @@
   @include h-wrapper-mobile;
   margin-top: 4vh;
 
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    width: 350px;
+    margin-top: 0;
+  }
+
   ul {
     max-height: 70vh;
     overflow-y: auto;
   }
+}
+
+.portfolio__flex {
+  @media screen and (min-width: 768px) {
+    @include h-wrapper-mobile;
+    display: flex;
+    margin-top: 6vh;
+  }
+}
+
+.portfolio__actions {
+  display: none;
+  @media screen and (min-width: 768px){
+    display: block;
+    margin-top: 10vh;
+
+    button {
+      width: 60px;
+      height: 60px;
+      background: var(--text-1);
+      margin-right: 10px;
+  
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: var(--text-3);
+      }
+    }
+  }
+
 }

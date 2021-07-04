@@ -12,7 +12,7 @@ export default function TextInput({ value, onChange, label, type, required }) {
           onChange={(e) => onChange(e.target.value)}
           name={camelize(label)}
           value={value}
-          rows={screenHeight < 700 ? "2" : "5"}
+          rows={screenHeight < 700 ? "2" : screenHeight > 1000 ? "10" : "5" }
           id={camelize(label)}
         />
       ) : (

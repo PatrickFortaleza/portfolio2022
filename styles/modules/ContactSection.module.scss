@@ -11,6 +11,10 @@
     @include body-regular;
     color: var(--text-3);
     letter-spacing: 0.025em;
+
+    @media screen and (min-width: 768px) {
+      font-size: 21px;
+    }
   }
 }
 
@@ -28,6 +32,10 @@
     margin-bottom: 7px;
     display: block;
     font-size: 14px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 17px;
+    }
   }
 
   h2 {
@@ -35,6 +43,10 @@
     font-size: 30px;
     font-weight: 600;
     color: var(--text-1);
+
+    @media screen and (min-width: 768px) {
+      font-size: 40px;
+    }
     
   }
 
@@ -46,6 +58,11 @@
     margin-top: 20px;
     margin-bottom: 7px;
     color: var(--text-1);
+
+    @media screen and (min-width: 768px) {
+      font-size: 17px;
+      margin-top: 40px;
+    }
   }
 
   p {
@@ -53,5 +70,9 @@
     line-height: 1.7em;
     margin-bottom: 7px;
     color: var(--text-1);
+
+    @media screen and (min-width: 768px) {
+      font-size: 17px;
+    }
   }
 }
