@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import screen from "../../../styles/modules/Screen.module.scss";
 import styles from "../../../styles/modules/ContactSection.module.scss";
 import ContactFormCtrl from "../../components/ContactForm/controller";

@@ -67,11 +67,9 @@
   bottom: 0;
 }
 
-.excerpt {
+.excerpt__container {
   @include h-wrapper-mobile;
   margin-top: 10vh;
-  max-height: 30vh;
-  overflow-y: auto;
 
   h2 {
     @include heading-bold;
@@ -79,17 +77,23 @@
     margin-bottom: 10px;
   }
 
-  p {
-    font-size: 14px;
-    margin-bottom: 7px;
-    line-height: 1.7em;
-  }
-
   button {
     @include body-regular;
     color: var(--highlight-primary-1);
     font-size: 14px;
     margin-top: 7px;
+    z-index: 99999;
+  }
+}
+
+.excerpt {
+  max-height: 25vh;
+  overflow-y: auto;
+
+  p {
+    font-size: 14px;
+    margin-bottom: 7px;
+    line-height: 1.7em;
   }
 }
 
