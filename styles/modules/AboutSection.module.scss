@@ -2,7 +2,7 @@
 
 .headshot__container {
   @include h-wrapper-mobile;
-  margin-top: 20px;
+  margin-top: 3vh;
   position: relative;
 }
 
@@ -69,7 +69,9 @@
 
 .excerpt {
   @include h-wrapper-mobile;
-  margin-top: 80px;
+  margin-top: 10vh;
+  max-height: 30vh;
+  overflow-y: auto;
 
   h2 {
     @include heading-bold;

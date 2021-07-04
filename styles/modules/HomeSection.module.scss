@@ -2,11 +2,11 @@
 
 .hero {
   @include h-wrapper-mobile;
-  margin-top: 50px;
+  margin-top: 6vh;
 
   h1 {
     text-transform: unset;
-    font-size: 24px;
+    font-size: 3vh;
     line-height: 1.7em;
     color: var(--text-1);
   }
@@ -37,7 +37,7 @@
   max-width: 30%;
   display: flex;
   justify-content: flex-end;
-  height: 120px;
+  height: 17vh;
 
   div {
     display: flex;

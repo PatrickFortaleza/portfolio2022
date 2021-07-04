@@ -1,0 +1,54 @@
+@import "../misc/mixins.scss";
+
+.form__container {
+  @include h-wrapper-mobile;
+  margin-top: 40px;
+  max-height: 60vh;
+  overflow-y: auto;
+
+  button {
+    background: var(--text-1);
+    padding: 10px 30px;
+    @include body-regular;
+    color: var(--text-3);
+    letter-spacing: 0.025em;
+  }
+}
+
+.form__head {
+  @include h-wrapper-mobile;
+  margin-top: 20px;
+  max-height: 25vh;
+  overflow-y: auto;
+
+  span {
+    color: var(--highlight-primary-1);
+    @include body-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    margin-bottom: 7px;
+    display: block;
+    font-size: 14px;
+  }
+
+  h2 {
+    @include body-bold;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  h4 {
+    @include body-bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 00.025em;
+    margin-top: 20px;
+    margin-bottom: 7px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.7em;
+    margin-bottom: 7px;
+  }
+}

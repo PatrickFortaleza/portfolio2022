@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/main.scss";
+import "../styles/misc/forms.scss";
 import styles from "../styles/modules/Screen.module.scss";
 import { ScreenProvider } from "../src/context/ScreenContext";
 import Head from "next/head";

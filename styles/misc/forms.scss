@@ -1,0 +1,106 @@
+@import "./mixins";
+
+button,
+input,
+optgroup,
+select,
+fieldset,
+textarea,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button[disabled],
+html input[disabled],
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+input[type="checkbox"],
+input[type="radio"],
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="search"],
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+label.input__label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+  font-size: 17px;
+  transition: 0.2s ease-in-out;
+  opacity: 0.5;
+  color: var(--text-2);
+  @include body-regular;
+}
+
+textarea ~ label.input__label {
+  top: 10px;
+  transform: translateY(0%);
+}
+
+input,
+textarea {
+  font-family: sans-serif;
+  margin: 0;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: none;
+  padding: 12px 10px;
+  outline: none;
+  background: rgba($color: var(--elevation-1), $alpha: 0.98);
+  color: var(--text-1);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(3px);
+  backdrop-filter: saturate(180%) blur(3px);
+}
+
+fieldset {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5vh;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 3px;
+}
+
+span.req {
+  color: var(--highlight-primary-1);
+}
+
+span.selector {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--highlight-primary-1);
+  transition: 0.2s ease-in-out;
+}
+
+input:focus ~ span.selector,
+textarea:focus ~ span.selector {
+  width: 100%;
+}
+
+input:focus ~ label,
+textarea:focus ~ label,
+fieldset.focused label {
+  color: var(--highlight-primary-1);
+  top: -20px;
+  left: 0;
+  transform: translateY(0%);
+  opacity: 1;
+  font-size: 14px;
+}
