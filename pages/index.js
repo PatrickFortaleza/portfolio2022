@@ -2,6 +2,7 @@ import Head from "next/head";
 import HomeSection from "../src/sections/Home";
 import AboutSection from "../src/sections/About";
 import ContactSection from "../src/sections/Contact";
+import PortfolioSection from "../src/sections/Portfolio";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <HomeSection />
       <AboutSection />
+      <PortfolioSection />
       <ContactSection />
     </div>
   );

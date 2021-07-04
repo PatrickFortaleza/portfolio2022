@@ -11,7 +11,7 @@ export default function AboutSection() {
   return (
     <div
       className={screen.screen__wrap}
-      style={{ backgroundColor: "var(--elevation-1)" }}
+      style={{ backgroundColor: "var(--elevation-2)" }}
     >
       <div className={styles.headshot__container}>
         <div className={styles.logo__accent}>

@@ -1,0 +1,53 @@
+@import "../misc/mixins";
+
+.card__container {
+  background: var(--elevation-2);
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 215px;
+  margin-bottom: 14px;
+}
+
+.card__header {
+  h3 {
+    @include body-bold;
+    font-size: 2.5vh;
+    margin-bottom: 7px;
+  }
+
+  span {
+    @include body-regular;
+    color: var(--text-2);
+    font-size: 14px;
+  }
+}
+
+.card__tech {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  ul {
+    display: flex;
+  }
+
+  ul li {
+    width: 25px;
+    margin-left: 10px;
+  }
+}
+
+.card__prompt {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+.card__mockup {
+  position: absolute;
+  left: calc(55%);
+  bottom: -10%;
+  width: 267px;
+  height: 188px;
+}
