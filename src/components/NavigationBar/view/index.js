@@ -5,18 +5,23 @@ import {
   ContactIcon,
   PortfolioIcon,
 } from "../../../icons";
-import { useScreen } from "../../../context/ScreenContext";
 
-export default function NavigationBarView({ scrollToSection, styles }) {
-  const screenContext = useScreen();
-  const { sectionIndicator } = screenContext;
+export default function NavigationBarView({
+  scrollToSection,
+  sectionIndicator,
+  styles,
+}) {
   return (
     <nav className={styles.nav__main}>
       <ul>
         <li>
           <button
             id="0"
-            className={sectionIndicator === 0 ? "active" : "inactive"}
+            className={
+              sectionIndicator === 0
+                ? styles.button__active
+                : styles.button__default
+            }
             onClick={(e) => scrollToSection(e)}
           >
             <span className="icon-container">
@@ -28,7 +33,11 @@ export default function NavigationBarView({ scrollToSection, styles }) {
         <li>
           <button
             id="1"
-            className={sectionIndicator === 1 ? "active" : "inactive"}
+            className={
+              sectionIndicator === 1
+                ? styles.button__active
+                : styles.button__default
+            }
             onClick={(e) => scrollToSection(e)}
           >
             <span className="icon-container">
@@ -40,7 +49,11 @@ export default function NavigationBarView({ scrollToSection, styles }) {
         <li>
           <button
             id="2"
-            className={sectionIndicator === 2 ? "active" : "inactive"}
+            className={
+              sectionIndicator === 2
+                ? styles.button__active
+                : styles.button__default
+            }
             onClick={(e) => scrollToSection(e)}
           >
             <span className="icon-container">
@@ -52,7 +65,11 @@ export default function NavigationBarView({ scrollToSection, styles }) {
         <li>
           <button
             id="3"
-            className={sectionIndicator === 3 ? "active" : "inactive"}
+            className={
+              sectionIndicator === 3
+                ? styles.button__active
+                : styles.button__default
+            }
             onClick={(e) => scrollToSection(e)}
           >
             <span className="icon-container">

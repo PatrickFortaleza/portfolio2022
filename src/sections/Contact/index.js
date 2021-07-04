@@ -4,11 +4,13 @@ import styles from "../../../styles/modules/ContactSection.module.scss";
 import ContactFormCtrl from "../../components/ContactForm/controller";
 import AnimatedWorld from "../../components/AnimatedWorld/view";
 
-export default function HomeSection() {
+export default function HomeSection({ sRef }) {
   return (
     <div
+      ref={sRef}
       className={screen.screen__wrap}
       style={{ backgroundColor: "var(--elevation-2)" }}
+      id="section__3"
     >
       <AnimatedWorld />
       <div className={styles.form__head}>

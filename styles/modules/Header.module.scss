@@ -109,7 +109,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 15px 0;
+
   @include h-wrapper-mobile;
   // background: var(--elevation-2);
   border-top: 1px solid var(--elevation-3);
@@ -133,7 +133,7 @@
   ul {
     display: flex;
     justify-content: space-between;
-    max-width: 85%;
+    max-width: 95%;
     margin: auto;
   }
 
@@ -142,6 +142,7 @@
     font-size: 10px;
     margin-top: 3px;
     color: var(--text-1);
+    display: none;
   }
 
   ul li button {
@@ -149,9 +150,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px 0;
+    width: 55px;
 
     &.active {
       filter: brightness(100%) !important;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 7px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--highlight-primary-1);
+      }
     }
 
     &.active label {
@@ -171,5 +184,38 @@
   ul svg {
     fill: var(--text-1);
     width: 100%;
+  }
+}
+
+.button__default {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  width: 55px;
+}
+
+.button__active {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  width: 55px;
+  position: relative;
+
+  span svg {
+    fill: var(--highlight-primary-1);
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--highlight-primary-1);
   }
 }

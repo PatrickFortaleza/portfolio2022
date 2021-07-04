@@ -5,13 +5,15 @@ import styles from "../../../styles/modules/AboutSection.module.scss";
 import ProficiencyCircleView from "../../components/ProficiencyCircle/view";
 import ArrowButton from "../../components/ArrowButton/view";
 
-export default function AboutSection() {
+export default function AboutSection({ sRef }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <div
       className={screen.screen__wrap}
       style={{ backgroundColor: "var(--elevation-2)" }}
+      ref={sRef}
+      id="section__1"
     >
       <div className={styles.headshot__container}>
         <div className={styles.logo__accent}>

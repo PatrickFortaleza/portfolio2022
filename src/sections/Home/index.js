@@ -15,11 +15,13 @@ import {
 } from "../../icons";
 import ScrollPromptView from "../../components/ScrollPrompt/view";
 
-export default function HomeSection() {
+export default function HomeSection({ sRef }) {
   return (
     <div
+      ref={sRef}
       className={screen.screen__wrap}
       style={{ backgroundColor: "var(--elevation-0)" }}
+      id="section__0"
     >
       <div className={styles.hero}>
         <h1>

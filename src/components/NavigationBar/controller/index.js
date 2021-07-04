@@ -4,9 +4,13 @@ import { useScreen } from "../../../context/ScreenContext";
 
 export default function NavigationBarCtrl({ styles }) {
   const screenContext = useScreen();
-  const { scrollToSection } = screenContext;
+  const { scrollToSection, sectionIndicator } = screenContext;
 
   return (
-    <NavigationBarView scrollToSection={scrollToSection} styles={styles} />
+    <NavigationBarView
+      scrollToSection={scrollToSection}
+      sectionIndicator={sectionIndicator}
+      styles={styles}
+    />
   );
 }
