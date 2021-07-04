@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import screen from "../../../styles/modules/Screen.module.scss";
 import styles from "../../../styles/modules/AboutSection.module.scss";
 import ProficiencyCircleView from "../../components/ProficiencyCircle/view";
 import ArrowButton from "../../components/ArrowButton/view";
+import { useScreen } from "../../context/ScreenContext"
 
 export default function AboutSection({ sRef }) {
+  const screenContext = useScreen()
+  const { setCurrentSection } = screenContext 
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -72,7 +75,7 @@ export default function AboutSection({ sRef }) {
       </div>
 
       <div className={styles.prompt}>
-        <ArrowButton text="See My Work" method={() => console.log("hello")} />
+        <ArrowButton text="See My Work" method={() => setCurrentSection(2)} />
       </div>
     </div>
   );

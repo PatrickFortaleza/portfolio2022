@@ -29,6 +29,10 @@ input[type="search"]::-webkit-search-decoration {
   box-sizing: border-box;
 }
 
+* button {
+  cursor: pointer;
+}
+
 label.input__label {
   position: absolute;
   top: 50%;

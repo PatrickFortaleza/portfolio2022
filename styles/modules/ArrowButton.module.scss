@@ -9,15 +9,22 @@
   text-transform: uppercase;
   letter-spacing: 0.025em;
   border-radius: 25px;
+  cursor: pointer;
 
   @media screen and (min-width: 676px) {
     padding: 10px 25px;
   }
 
-  &:hover > span.btn-text,
-  &:active > span.btn-text,
-  &:focus > span.btn-text {
-    margin-right: 40px;
+  &:hover > span,
+  &:active > span,
+  &:focus > span {
+    margin-right: 10px;
+  }
+
+  &:hover > span svg,
+  &:active > span svg,
+  &:focus > span svg {
+    transform: rotate(-45deg)
   }
 
   span {
@@ -38,6 +45,7 @@
   svg {
     fill: var(--text-1);
     width: 20px;
+    transition: .2s ease-in-out;
   }
 
   span.icon-container {

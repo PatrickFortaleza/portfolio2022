@@ -23,6 +23,7 @@ export function ScreenProvider({ children }) {
   const [screenDimensions, setScreenDimensions] = useState(initialScreenState);
   const [windowYOffset, setWindowYOffset] = useState(0);
   const [isTop, setIsTop] = useState(true);
+  const [hasScrolled, setHasScrolled] = useState(false)
   const [currentSection, setCurrentSection] = useState(0);
   const [sectionIndicator, setSectionIndicator] = useState(0);
 
@@ -45,6 +46,13 @@ export function ScreenProvider({ children }) {
   useEffect(() => {
     setStyleDimensions();
   }, [screenDimensions]);
+
+  useEffect(() => {
+    if(isTop === true){
+      setHasScrolled(false)
+      setCurrentSection(0)
+    } 
+  }, [isTop])
 
   useEffect(() => {
     windowYOffset === 0 ? setIsTop(true) : setIsTop(false);
@@ -74,6 +82,7 @@ export function ScreenProvider({ children }) {
   };
 
   const handleScroll = () => {
+    if(windowYOffset !== window.pageYOffset && hasScrolled === false) setHasScrolled(true)
     setWindowYOffset(window.pageYOffset);
   };
 
@@ -87,6 +96,7 @@ export function ScreenProvider({ children }) {
     sectionIndicator,
     windowYOffset,
     isTop,
+    hasScrolled,
   };
 
   return (

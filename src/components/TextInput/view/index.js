@@ -1,6 +1,10 @@
 import React from "react";
+import { useScreen } from "../../../context/ScreenContext"
 
 export default function TextInput({ value, onChange, label, type, required }) {
+  const screenContext = useScreen();
+  const { screenHeight } = screenContext;
+
   return (
     <fieldset className={value.length > 0 ? "focused" : ""}>
       {type.toLowerCase() === "textarea" ? (
@@ -8,7 +12,7 @@ export default function TextInput({ value, onChange, label, type, required }) {
           onChange={(e) => onChange(e.target.value)}
           name={camelize(label)}
           value={value}
-          rows="5"
+          rows={screenHeight < 700 ? "2" : "5"}
           id={camelize(label)}
         />
       ) : (

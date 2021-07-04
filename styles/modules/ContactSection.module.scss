@@ -4,7 +4,6 @@
   @include h-wrapper-mobile;
   margin-top: 40px;
   max-height: 60vh;
-  overflow-y: auto;
 
   button {
     background: var(--text-1);
@@ -35,6 +34,7 @@
     @include body-bold;
     font-size: 30px;
     font-weight: 600;
+    color: var(--text-1);
   }
 
   h4 {
@@ -44,11 +44,13 @@
     letter-spacing: 00.025em;
     margin-top: 20px;
     margin-bottom: 7px;
+    color: var(--text-1);
   }
 
   p {
     font-size: 14px;
     line-height: 1.7em;
     margin-bottom: 7px;
+    color: var(--text-1);
   }
 }

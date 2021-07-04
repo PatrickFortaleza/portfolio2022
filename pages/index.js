@@ -38,8 +38,8 @@ export default function Home() {
     const focused = sectionRefs.filter(
       (ref) =>
         ref.current &&
-        ref.current.getBoundingClientRect().top > 0 - 20 &&
-        ref.current.getBoundingClientRect().top < screenHeight + 20
+        ref.current.getBoundingClientRect().top > 0 - 10 &&
+        ref.current.getBoundingClientRect().top < screenHeight + 10
     )[0];
 
     // if (

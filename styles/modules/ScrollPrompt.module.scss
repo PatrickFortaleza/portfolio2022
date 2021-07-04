@@ -3,7 +3,7 @@
 .scroll__path {
   fill: none;
   stroke: var(--text-1);
-  stroke-width: 1;
+  stroke-width: 0.75;
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
@@ -23,6 +23,7 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+  transition: 1s ease-in-out;
 
   div {
     position: relative;
