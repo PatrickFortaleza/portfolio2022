@@ -104,12 +104,14 @@
   ================================
 */
 
-.nav__main {
+.nav__container {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+}
 
+.nav__main {
   @include h-wrapper-mobile;
   // background: var(--elevation-2);
   border-top: 1px solid var(--elevation-3);

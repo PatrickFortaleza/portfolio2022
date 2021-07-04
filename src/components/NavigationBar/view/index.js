@@ -12,6 +12,7 @@ export default function NavigationBarView({
   styles,
 }) {
   return (
+  <div className={styles.nav__container}>
     <nav className={styles.nav__main}>
       <ul>
         <li>
@@ -80,5 +81,6 @@ export default function NavigationBarView({
         </li>
       </ul>
     </nav>
+  </div>
   );
 }
