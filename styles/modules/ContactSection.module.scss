@@ -24,7 +24,7 @@
     color: var(--highlight-primary-1);
     @include body-bold;
     text-transform: uppercase;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.05em;
     margin-bottom: 7px;
     display: block;
     font-size: 14px;
@@ -35,13 +35,14 @@
     font-size: 30px;
     font-weight: 600;
     color: var(--text-1);
+    
   }
 
   h4 {
     @include body-bold;
     text-transform: uppercase;
     font-size: 14px;
-    letter-spacing: 00.025em;
+    letter-spacing: 0.05em;
     margin-top: 20px;
     margin-bottom: 7px;
     color: var(--text-1);

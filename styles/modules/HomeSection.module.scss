@@ -9,6 +9,10 @@
     font-size: 3vh;
     line-height: 1.7em;
     color: var(--text-1);
+
+    @media screen and (min-width: 768px) {
+      font-size: 4vh;
+    }
   }
 
   span {
@@ -23,6 +27,11 @@
     li {
       width: 21px;
       margin-right: 7px;
+
+      @media screen and (min-width: 768px) {
+        width: 27px;
+        margin-right: 17px;
+      }
 
       svg {
         fill: var(--text-1);
@@ -52,6 +61,10 @@
     padding: 7px 10px;
     color: var(--text-3);
     font-weight: 400;
+
+    @media screen and (min-width: 768px){
+      font-size: 60px;
+    }
   }
 }
 

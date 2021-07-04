@@ -8,7 +8,7 @@ import { useScreen } from "../../context/ScreenContext"
 
 export default function AboutSection({ sRef }) {
   const screenContext = useScreen()
-  const { setCurrentSection } = screenContext 
+  const { setCurrentSection, screenWidth } = screenContext 
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -45,31 +45,14 @@ export default function AboutSection({ sRef }) {
         <h2>About Me</h2>
         <div className={styles.excerpt}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-            fuga sapiente commodi tempore? Corrupti, repudiandae.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus blandit vulputate. Duis erat enim, congue vitae porta at, porta at nulla. Donec pretium risus ex, vitae tempor nibh rhoncus vel. Pellentesque feugiat erat a purus iaculis, at vestibulum neque congue. Nullam vitae turpis non augue tincidunt faucibus a vitae dolor.
           </p>
-          <p>
-            Cumque, quisquam, ut facere enim ipsum laborum porro aut non unde
-            eligendi necessitatibus aliquam in hic tempora iure mollitia vero
-            omnis dignissimos iusto? Dolorem, corporis!
+          <p style={expanded || screenWidth > 540 ? { display: "block" } : { display: "none" }}>
+          Mauris non vestibulum libero. Duis euismod elementum urna ut mollis. Phasellus a neque ut tortor maximus facilisis ac sit amet nibh. Integer non cursus turpis. Aenean aliquet vel velit sit amet euismod. Aenean facilisis diam vitae pulvinar pretium. Nunc tincidunt, nisi a lobortis commodo, erat velit venenatis dui, sit amet euismod justo arcu eu mauris. Duis ante arcu, interdum sed ornare sit amet, aliquam et nulla.
           </p>
-          {expanded ? (
-            <>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-                laudantium veniam neque necessitatibus fugiat, accusantium
-                consequuntur error, enim maxime at, nostrum quam alias dolorem
-                magni!
-              </p>
-              <p>
-                Sunt consectetur ad culpa harum autem fuga repudiandae ipsum
-                maxime.
-              </p>
-            </>
-          ) : null}
         </div>
 
-        <button onClick={() => setExpanded(!expanded)}>
+        <button style={ screenWidth > 540 ? { display: "none" } : { display: "block" } } onClick={() => setExpanded(!expanded)}>
           {expanded ? "See Less" : "Read More"}
         </button>
       </div>

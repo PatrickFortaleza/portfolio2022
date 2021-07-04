@@ -19,6 +19,11 @@
   z-index: 500;
   border-bottom: 1px solid rgba($color: var(--elevation-1), $alpha: 0);
 
+  @media screen and (min-width: 768px){
+    padding: 25px 0;
+    @include h-wrapper-mobile;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -59,11 +64,14 @@
 
 .logo__secondary {
   font-family: usual, sans-serif;
-  font-size: 27px;
   font-weight: 700;
   font-style: normal;
   font-size: 14px;
   letter-spacing: 0.025em;
+
+  @media screen and (min-width: 768px){
+    font-size: 17px;
+  }
 }
 
 /*
@@ -90,6 +98,11 @@
     justify-self: center;
     width: 18px;
     height: 18px;
+
+    @media screen and (min-width: 768px){
+      width: 21px;
+      height: 21px;
+    }
   }
 
   svg {
@@ -155,6 +168,10 @@
     padding: 15px 0;
     width: 55px;
 
+    @media screen and (min-width: 768px){
+      padding: 20px 0;
+    }
+
     &.active {
       filter: brightness(100%) !important;
 
@@ -181,6 +198,10 @@
   ul li span {
     width: 17px;
     display: block;
+
+    @media screen and (min-width: 768px){
+      width: 21px;
+    }
   }
 
   ul svg {
