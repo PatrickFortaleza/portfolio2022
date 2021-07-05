@@ -56,10 +56,20 @@
     top: 20vh;
   }
 
-  @media screen and (min-width: 1300px) {
+  @media screen and (min-width: 1400px) {
     max-height: 200px;
     top: 30vh;
     width: calc(var(--vw) * 0.4);
+  }
+
+  @media screen and (min-width: 1300px) {
+    width: auto;
+    right: 0;
+    left: unset;
+    top: calc(100% - 10vh);
+    height: 17.5vh;
+    bottom: 0;
+    width: 20000px;
   }
 
   div {
@@ -133,6 +143,10 @@
     margin-left: 4vw;
   }
 
+  @media screen and (min-width: 1300px) {
+    margin-left: 10vw;
+  }
+
   h2 {
     @include heading-bold;
     text-transform: uppercase;
@@ -195,6 +209,10 @@
     display: flex;
     justify-content: flex-start;
     margin-top: 4vh;
+  }
+
+  @media screen and (min-width: 1400px) {
+    margin-top: 7vh;
   }
 }
 

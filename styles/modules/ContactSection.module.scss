@@ -11,6 +11,10 @@
     padding-left: 20px;
   }
 
+  @media screen and (min-width: 1300px) {
+    flex: 1.75;
+  }
+
   button {
     background: var(--text-1);
     padding: 10px 30px;
@@ -36,6 +40,14 @@
     max-height: 100%;
   }
 
+  @media screen and (min-width: 1400px) {
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1300px) {
+    padding-right: 3vw;
+  }
+
   span {
     color: var(--highlight-primary-1);
     @include body-bold;
@@ -56,10 +68,9 @@
     font-weight: 600;
     color: var(--text-1);
 
-    @media screen and (min-width: 768px) {
-      font-size: 40px;
-    }
-    
+    // @media screen and (min-width: 768px) {
+    //   font-size: 40px;
+    // }
   }
 
   h4 {
@@ -94,5 +105,14 @@
     display: flex;
     @include h-wrapper-mobile;
     margin-top: 4vh;
+  }
+
+  @media screen and (min-width: 1400px) {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    max-width: 1150px;
   }
 }

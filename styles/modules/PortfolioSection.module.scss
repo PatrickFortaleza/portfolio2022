@@ -12,6 +12,10 @@
     max-height: unset;
   }
 
+  @media screen and (min-width: 1400px) {
+    margin-top: 6vh;
+  }
+
   span {
     color: var(--highlight-primary-1);
     @include body-bold;
@@ -62,6 +66,10 @@
   ul {
     max-height: 70vh;
     overflow-y: auto;
+
+    @media screen and (min-width: 1300px) {
+      max-height: 100%;
+    }
   }
 }
 
@@ -75,7 +83,7 @@
 
 .portfolio__actions {
   display: none;
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     display: block;
     margin-top: 10vh;
 
@@ -84,7 +92,7 @@
       height: 60px;
       background: var(--text-1);
       margin-right: 10px;
-  
+
       svg {
         width: 25px;
         height: 25px;
@@ -92,5 +100,4 @@
       }
     }
   }
-
 }

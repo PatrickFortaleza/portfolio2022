@@ -10,7 +10,7 @@
   margin-bottom: 14px;
 
   @media screen and (min-width: 768px) {
-    height: calc(var(--vh)*0.70);
+    height: calc(var(--vh) * 0.7);
     margin-bottom: 0;
     display: flex;
     justify-content: space-around;
@@ -28,10 +28,13 @@
       top: 0;
     }
   }
+
+  @media screen and (min-width: 1024px) {
+    height: calc(var(--vh) * 0.8);
+  }
 }
 
 .card__header {
-
   @media screen and (min-width: 768px) {
     position: absolute;
     left: 30px;
@@ -85,11 +88,11 @@
   @media screen and (min-width: 768px) {
     left: 30px;
     bottom: 14px;
-    
+
     button {
       color: var(--text-2) !important;
       text-transform: capitalize;
-    
+
       span {
         font-weight: 400 !important;
       }
@@ -117,4 +120,3 @@
     top: -10%;
   }
 }
-
