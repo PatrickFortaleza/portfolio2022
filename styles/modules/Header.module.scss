@@ -16,8 +16,9 @@
   left: 0;
   width: 100%;
   transition: 0.2s ease-in-out;
-  z-index: 500;
+  z-index: 600;
   border-bottom: 1px solid rgba($color: var(--elevation-1), $alpha: 0);
+
 
   @media screen and (min-width: 768px){
     padding: 25px 0;

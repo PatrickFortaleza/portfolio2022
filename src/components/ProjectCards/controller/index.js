@@ -2,6 +2,15 @@ import React from "react";
 import ProjectCardsView from "../view";
 
 export default function ProjectCardsCtrl({sliderRef, next, prev}) {
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <ProjectCardsView 
       settings={sliderSettings}
@@ -12,11 +21,4 @@ export default function ProjectCardsCtrl({sliderRef, next, prev}) {
   )
 }
 
-const sliderSettings = {
-  dots: false,
-  infinite: true,
-  arrows: false,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
+
