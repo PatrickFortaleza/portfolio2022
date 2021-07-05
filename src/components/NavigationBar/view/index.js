@@ -76,7 +76,7 @@ export default function NavigationBarView({
             <span className="icon-container">
               <ContactIcon />
             </span>
-            <label>Contact</label>
+            <label className="label__icon"><ContactIcon style={{ display: "block" }}/></label>
           </button>
         </li>
       </ul>

@@ -4,6 +4,13 @@
   @include h-wrapper-mobile;
   margin-top: 6vh;
 
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+    margin-top: 0;
+    margin-left: 3vw;
+  }
+  
+
   h1 {
     text-transform: unset;
     font-size: 3vh;
@@ -43,10 +50,16 @@
 .logo__accent {
   margin-top: 20px;
   background: var(--highlight-primary-1);
-  max-width: 30%;
+  max-width: 20%;
   display: flex;
   justify-content: flex-end;
   height: 17vh;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+  }
 
   div {
     display: flex;
@@ -65,6 +78,15 @@
     @media screen and (min-width: 768px){
       font-size: 60px;
     }
+  }
+}
+
+.hero__wrap {
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 40px;
+    margin-top: calc(var(--vh)*.1)
   }
 }
 

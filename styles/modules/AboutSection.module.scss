@@ -4,6 +4,10 @@
   @include h-wrapper-mobile;
   margin-top: 3vh;
   position: relative;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: 2.5vh;
+  }
 }
 
 .headshot__wrap {
