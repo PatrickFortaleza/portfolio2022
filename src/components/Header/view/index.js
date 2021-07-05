@@ -12,6 +12,6 @@ export default function HeaderView({ isTop }) {
         <SocialLinksView styles={styles} />
       </div>
       <NavigationBarCtrl styles={styles} />
-    </header>
+    </header> 
   );
 }
