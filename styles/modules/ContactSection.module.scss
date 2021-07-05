@@ -5,6 +5,12 @@
   margin-top: 40px;
   max-height: 60vh;
 
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+    flex: 2.5;
+    padding-left: 20px;
+  }
+
   button {
     background: var(--text-1);
     padding: 10px 30px;
@@ -23,6 +29,12 @@
   margin-top: 20px;
   max-height: 25vh;
   overflow-y: auto;
+
+  @media screen and (min-width: 1024px) {
+    padding: 0;
+    flex: 2;
+    max-height: 100%;
+  }
 
   span {
     color: var(--highlight-primary-1);
@@ -74,5 +86,13 @@
     @media screen and (min-width: 768px) {
       font-size: 17px;
     }
+  }
+}
+
+.contact__container {
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    @include h-wrapper-mobile;
+    margin-top: 4vh;
   }
 }

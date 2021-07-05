@@ -13,23 +13,25 @@ export default function HomeSection({ sRef }) {
       id="section__3"
     >
       <AnimatedWorld />
-      <div className={styles.form__head}>
-        <span>Contact</span>
-        <h2>Give me a shout!</h2>
-        <p>
-          Please feel free to leave me any messages related to general
-          inquiries, new opportunities, or if you just want to say hello!
-        </p>
+      <div className={styles.contact__container}>
+        <div className={styles.form__head}>
+          <span>Contact</span>
+          <h2>Give me a shout!</h2>
+          <p>
+            Please feel free to leave me any messages related to general
+            inquiries, new opportunities, or if you just want to say hello!
+          </p>
 
-        <h4>Direct Contact</h4>
-        <p>
-          <a href="mailto:patrickfortaleza@gmail.com">
-            patrickfortaleza@gmail.com
-          </a>
-        </p>
-      </div>
-      <div className={styles.form__container}>
-        <ContactFormCtrl />
+          <h4>Direct Contact</h4>
+          <p>
+            <a href="mailto:patrickfortaleza@gmail.com">
+              patrickfortaleza@gmail.com
+            </a>
+          </p>
+        </div>
+        <div className={styles.form__container}>
+          <ContactFormCtrl />
+        </div>
       </div>
     </div>
   );
