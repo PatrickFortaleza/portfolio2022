@@ -4,11 +4,11 @@ import screen from "../../../styles/modules/Screen.module.scss";
 import styles from "../../../styles/modules/AboutSection.module.scss";
 import ProficiencyCircleView from "../../components/ProficiencyCircle/view";
 import ArrowButton from "../../components/ArrowButton/view";
-import { useScreen } from "../../context/ScreenContext"
+import { useScreen } from "../../context/ScreenContext";
 
 export default function AboutSection({ sRef }) {
-  const screenContext = useScreen()
-  const { setCurrentSection, screenWidth } = screenContext 
+  const screenContext = useScreen();
+  const { setCurrentSection, screenWidth } = screenContext;
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -18,12 +18,11 @@ export default function AboutSection({ sRef }) {
       ref={sRef}
       id="section__1"
     >
-
       <span className={styles.accent}></span>
       <div className={styles.prof__circle}>
         <ProficiencyCircleView />
       </div>
-      
+
       <div className={styles.about__excerpt}>
         <div className={styles.headshot__container}>
           <div className={styles.logo__accent}>
@@ -47,19 +46,41 @@ export default function AboutSection({ sRef }) {
           <h2>About Me</h2>
           <div className={styles.excerpt}>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus blandit vulputate. Duis erat enim, congue vitae porta at, porta at nulla. Donec pretium risus ex, vitae tempor nibh rhoncus vel. Pellentesque feugiat erat a purus iaculis, at vestibulum neque congue. Nullam vitae turpis non augue tincidunt faucibus a vitae dolor.
+              Hello World! My name is Patrick. I am a business-oriented
+              technologist with an affinity for good interface design and
+              project management. I currently work at Sparx Publishing Group as
+              a Technical Project Manager. I believe that a good process will
+              always lead to great results, and I apply this discipline in all
+              aspects of my work, and my learning.
             </p>
-            <p style={expanded || screenWidth > 540 ? { display: "block" } : { display: "none" }}>
-            Mauris non vestibulum libero. Duis euismod elementum urna ut mollis. Phasellus a neque ut tortor maximus facilisis ac sit amet nibh. Integer non cursus turpis. Aenean aliquet vel velit sit amet euismod. Aenean facilisis diam vitae pulvinar pretium. Nunc tincidunt, nisi a lobortis commodo, erat velit venenatis dui, sit amet euismod justo arcu eu mauris. Duis ante arcu, interdum sed ornare sit amet, aliquam et nulla.
+            <p
+              style={
+                expanded || screenWidth > 540
+                  ? { display: "block" }
+                  : { display: "none" }
+              }
+            >
+              When I&apos;m not in the office, I like to get creative. I
+              freelance design services for my various clients, create passion
+              projects, or help my friends out with their record label! I&apos;m
+              also an avid gamer, and board game master extraordinaire.
             </p>
           </div>
 
-          <button style={ screenWidth > 540 ? { display: "none" } : { display: "block" } } onClick={() => setExpanded(!expanded)}>
+          <button
+            style={
+              screenWidth > 540 ? { display: "none" } : { display: "block" }
+            }
+            onClick={() => setExpanded(!expanded)}
+          >
             {expanded ? "See Less" : "Read More"}
           </button>
 
           <div className={styles.prompt__desktop}>
-            <ArrowButton text="See My Work" method={() => setCurrentSection(2)} />
+            <ArrowButton
+              text="See My Work"
+              method={() => setCurrentSection(2)}
+            />
           </div>
         </div>
 

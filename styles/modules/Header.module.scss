@@ -49,20 +49,6 @@
     @include h-wrapper-mobile;
     align-items: center;
   }
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 100%;
-  //   height: 100%;
-  //   left: 0;
-  //   top: 0;
-  //   z-index: -1;
-  //   transition: 0.2s ease-in-out;
-  //   background: rgba(255, 255, 255, 0.8);
-  //   -webkit-backdrop-filter: saturate(180%) blur(3px);
-  //   backdrop-filter: saturate(180%) blur(3px);
-  // }
 }
 
 .header__container__scrolled {
@@ -219,6 +205,7 @@
     margin-top: 3px;
     color: var(--text-1);
     display: none;
+    cursor: pointer;
 
     @media screen and (min-width: 1024px) {
       display: block;
