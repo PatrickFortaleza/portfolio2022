@@ -108,3 +108,32 @@ fieldset.focused label {
   opacity: 1;
   font-size: 14px;
 }
+
+.spinner {
+  width: 25px;
+  height: 25px;
+
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid var(--highlight-primary-1);
+  border-radius: 100%;
+
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  transform: translateY(50%);
+
+  animation: spin 1s infinite linear;
+
+  @media screen and (min-width: 768px) {
+    top: 10px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -17,10 +17,11 @@
 
   button {
     background: var(--text-1);
-    padding: 10px 30px;
+    padding: 10px 50px;
     @include body-regular;
     color: var(--text-3);
     letter-spacing: 0.025em;
+    position: relative;
 
     @media screen and (min-width: 768px) {
       font-size: 21px;
