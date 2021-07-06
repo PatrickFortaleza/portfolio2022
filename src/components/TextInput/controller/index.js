@@ -6,6 +6,7 @@ export default function TextInputCtrl({ type, label, syncData, required }) {
 
   useEffect(() => {
     syncData(textValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textValue]);
 
   return (

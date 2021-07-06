@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../../../../styles/modules/ScrollPrompt.module.scss";
-import { useScreen } from "../../../context/ScreenContext"
+import { useScreen } from "../../../context/ScreenContext";
 
 export default function ScrollPromptView() {
   const screenContext = useScreen();
@@ -18,12 +18,21 @@ export default function ScrollPromptView() {
     document.documentElement.style.setProperty("--scrollPath", `${pathLength}`);
   }, [pathLength]);
 
-
   return (
-      <div  className={styles.prompt__container} style={hasScrolled ? { opacity: 0, transform: "translateY(20px)", visibility: "hidden" } : {opacity: 1, transform: "translateY(0px)"}}>
-      <button onClick={() => setCurrentSection(1)} style={{position: "relative"}}>
+    <div
+      className={styles.prompt__container}
+      style={
+        hasScrolled
+          ? { opacity: 0, transform: "translateY(20px)", visibility: "hidden" }
+          : { opacity: 1, transform: "translateY(0px)" }
+      }
+    >
+      <button
+        onClick={() => setCurrentSection(1)}
+        style={{ position: "relative" }}
+      >
         <span className={styles.prompt__heading}>
-          See what I'm <span>all about! </span>
+          See what I&apos;m <span>all about! </span>
         </span>
         <span className={styles.prompt__copy}>scroll</span>
         <svg
