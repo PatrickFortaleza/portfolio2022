@@ -5,8 +5,9 @@ import styles from "../styles/modules/Screen.module.scss";
 import { ScreenProvider } from "../src/context/ScreenContext";
 import Head from "next/head";
 import HeaderCtrl from "../src/components/Header/controller";
+import App from "next/app";
 
-function App({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <ScreenProvider>
       <Head>
@@ -97,4 +98,11 @@ function App({ Component, pageProps }) {
   );
 }
 
-export default App;
+MyApp.getInitialProps = async (appContext) => {
+  // calls page's `getInitialProps` and fills `appProps.pageProps`
+  const appProps = await App.getInitialProps(appContext);
+
+  return { ...appProps };
+};
+
+export default MyApp;

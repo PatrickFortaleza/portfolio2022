@@ -67,7 +67,7 @@
     max-height: 70vh;
     overflow-y: auto;
 
-    @media screen and (min-width: 1300px) {
+    @media screen and (min-width: 768px) {
       max-height: 100%;
     }
   }
