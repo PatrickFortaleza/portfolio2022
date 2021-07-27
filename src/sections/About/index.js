@@ -48,8 +48,8 @@ export default function AboutSection({ sRef }) {
             <p>
               Hello World! My name is Patrick. I am a business-oriented
               technologist with an affinity for good interface design and
-              project management. I currently work at Sparx Publishing Group as
-              a Technical Project Manager. I believe that a good process will
+              project management. I currently work at Agilitek Solutions Ltd. as
+              a UI/UX Application Developer. I believe that a good process will
               always lead to great results, and I apply this discipline in all
               aspects of my work, and my learning.
             </p>
