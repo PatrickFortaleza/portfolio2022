@@ -44,7 +44,7 @@ const projects = [
     subtitle: "Patricia's Portfolio Website",
     prompt: "View live site",
     src: "https://patrickfortaleza-files.s3.us-west-1.amazonaws.com/pmacapagal.png",
-    url: "https://pmacapagal.netlify.app/",
+    url: "https://www.pmacapagal.com/",
     technologies: ["javascript", "react", "css"],
   },
   {
